@@ -1,24 +1,26 @@
 body {
-  font-family: Helvetica,sans-serif;
+  font-family: Helvetica;
 }
 
 h1 {
   text-align: center;
-  font: bold 3em;
-  color: #7c0000;
+  font: bold 3em Helvetica;
+  color: #440000;
+  margin: 0px;
 }
 
 h2 {
   font: bold 2em;
-  color: #7c0000;
+  color: #440000;
+  margin: 15px 0px 0px 0px;
 }
 
 p.info {
   background-color: black;
   border: 2px solid #606060;
   padding: 5px;
-  margin: 5px;
-  border-radius: 10px;
-  font: 0.8em;
+  margin: 2px;
+  font-size: 0.8em;
   color: #FFFFFF;
+  outline: #000000 solid 3px;
 }
