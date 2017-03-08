@@ -22,6 +22,8 @@ fiveQuestions[18] = 'Of course, I am! Don\'t be so cynical! '
 
 var outOf = '/7 Answers Correct';
 
+var userName = prompt('First off, please tell me your name.');
+
 // console.log(fiveQuestions.length); Debugging code
 
 for (var i = 0; i < fiveQuestions.length; i += 4) {
@@ -69,7 +71,7 @@ for (var i = 0; i < fiveQuestions.length; i += 4) {
   }
 }
 
-alert('Now we\'re going to play a game! You\'ll have 4 tries to guess my age. I\'ll tell you if you\'re too high or too low.');
+alert('Okay, ' + userName + ', now we\'re going to play a guessing game! You\'ll have 4 tries to guess my age. I\'ll tell you if you\'re too high or too low.');
 for (var b = 3; b >= 0; --b) {
   var numGuess = prompt('What\'s your guess?');
   if (!isNaN(numGuess) && numGuess == 31) {
@@ -96,4 +98,11 @@ for (var b = 3; b >= 0; --b) {
     console.log('Received invalid answer. Requesting a new answer.');
     b++;
   }
+}
+
+if (correctAnswers === 7) {
+  alert('Awesome job, ' + userName + '! You got all the questions correct.');
+}
+else {
+  alert('Bummer, ' + userName + '. You only got ' + correctAnswers + outOf + '. Better luck next time.')
 }
