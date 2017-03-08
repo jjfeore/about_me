@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica;
+}
+
+h1 {
+  text-align: center;
+  font: bold 3em Helvetica;
+  color: #440000;
+  margin: 0px;
+}
+
+h2 {
+  font: bold 1.5em Helvetica;
+  color: #440000;
+  margin: 15px 0px 0px 0px;
+}
+
+p.info {
+  background-color: black;
+  border: 2px solid #606060;
+  padding: 5px;
+  margin: 2px;
+  font-size: 0.8em;
+  color: #FFFFFF;
+  outline: #000000 solid 3px;
+}
+
+em {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: normal;
+}
