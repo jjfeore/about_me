@@ -49,16 +49,10 @@ ol {
   outline: #000000 solid 3px;
 }
 
-em, wrong {
+em {
   color: #FF0000;
   font-weight: bold;
   font-style: normal;
-}
-
-correct {
-    color: #FFFF00;
-    font-weight: bold;
-    font-style: normal;
 }
 
 top, middle, bottom {
