@@ -57,7 +57,7 @@ for (var i = 0; i < fiveQuestions.length; i += 4) {
     }
     else if (fiveQuestions[a].toLowerCase() === 'no' || fiveQuestions[a].toLowerCase() === 'n') {
       correctAnswers++;
-      alert(fiveQuestions[i+i] + correctAnswers + outOf);
+      alert(fiveQuestions[i+1] + correctAnswers + outOf);
       console.log(fiveQuestions[i] + ': ' + fiveQuestions[a]);
       console.log(correctAnswers + outOf);
       break;
@@ -66,5 +66,34 @@ for (var i = 0; i < fiveQuestions.length; i += 4) {
       alert('Please enter a valid answer. Valid answers are in the form of: Yes, No, Y, or N.');
       console.log('Received invalid answer. Requesting a new answer.');
     }
+  }
+}
+
+alert('Now we\'re going to play a game! You\'ll have 4 tries to guess my age. I\'ll tell you if you\'re too high or too low.');
+for (var b = 3; b >= 0; --b) {
+  var numGuess = prompt('What\'s your guess?');
+  if (!isNaN(numGuess) && numGuess == 31) {
+    correctAnswers++;
+    alert('You got it! I\'m 31 years old. ' + correctAnswers + outOf);
+    console.log('Guessed 31 correctly. ' + correctAnswers + outOf);
+    break;
+  }
+  else if (b === 0 && !isNaN(numGuess) && numGuess != 31) {
+    alert('Sorry. That was your last guess. I\'m actually 31 years old. ' + correctAnswers + outOf);
+    console.log('Did not get the right answer in 4 tries. ' + correctAnswers + outOf);
+  }
+  else if (!isNaN(numGuess) && numGuess > 31) {
+    alert('Too high ' + b + '/4 tries remaining');
+    console.log(numGuess + ' > 31 ' + b + '/4 tries remaining');
+  }
+  else if (!isNaN(numGuess) && numGuess < 31) {
+    alert('Too low ' + b + '/4 tries remaining');
+    console.log(numGuess + ' < 31 ' + b + '/4 tries remaining');
+  }
+  else {
+    var c = b + 1;
+    alert('Invalid answer: please enter a number. Still ' + c + '/4 tries remaining');
+    console.log('Received invalid answer. Requesting a new answer.');
+    b++;
   }
 }
