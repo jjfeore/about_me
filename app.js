@@ -71,32 +71,109 @@ for (var i = 0; i < fiveQuestions.length; i += 4) {
   }
 }
 
-alert('Okay, ' + userName + ', now we\'re going to play a guessing game! You\'ll have 4 tries to guess my age. I\'ll tell you if you\'re too high or too low.');
+var ranNum = Math.floor(Math.random() * (10)) + 1;
+console.log('Assigned random number of ' + ranNum);
+alert('Okay, ' + userName + ', now we\'re going to play a guessing game! You\'ll have 4 tries to guess a random number between 1 and 10. I\'ll tell you if you\'re too high or too low.');
 for (var b = 3; b >= 0; --b) {
   var numGuess = prompt('What\'s your guess?');
-  if (!isNaN(numGuess) && numGuess == 31) {
+  if (!isNaN(numGuess) && numGuess == ranNum) {
     correctAnswers++;
-    alert('You got it! I\'m 31 years old. ' + correctAnswers + outOf);
-    console.log('Guessed 31 correctly. ' + correctAnswers + outOf);
+    alert('You got it! ' + correctAnswers + outOf);
+    console.log('Guessed ' + ranNum + ' correctly. ' + correctAnswers + outOf);
     break;
   }
-  else if (b === 0 && !isNaN(numGuess) && numGuess != 31) {
-    alert('Sorry. That was your last guess. I\'m actually 31 years old. ' + correctAnswers + outOf);
+  else if (b === 0 && !isNaN(numGuess) && numGuess != ranNum) {
+    alert('Sorry. That was your last guess. The number was actually ' + ranNum + '. '+ correctAnswers + outOf);
     console.log('Did not get the right answer in 4 tries. ' + correctAnswers + outOf);
   }
-  else if (!isNaN(numGuess) && numGuess > 31) {
+  else if (!isNaN(numGuess) && numGuess > ranNum) {
     alert('Too high ' + b + '/4 tries remaining');
-    console.log(numGuess + ' > 31 ' + b + '/4 tries remaining');
+    console.log('Too high ' + b + '/4 tries remaining');
   }
-  else if (!isNaN(numGuess) && numGuess < 31) {
+  else if (!isNaN(numGuess) && numGuess < ranNum) {
     alert('Too low ' + b + '/4 tries remaining');
-    console.log(numGuess + ' < 31 ' + b + '/4 tries remaining');
+    console.log('Too low ' + b + '/4 tries remaining');
   }
   else {
     var c = b + 1;
     alert('Invalid answer: please enter a number. Still ' + c + '/4 tries remaining');
     console.log('Received invalid answer. Requesting a new answer.');
     b++;
+  }
+}
+
+var topPlaces = ['Croatia', 'Peru', 'Antarctica', 'Brazil', 'Italy', 'Ethiopia', 'Germany', 'Nepal', 'Turkey', 'Ethiopia'];
+alert (userName + ', I hope you remember my list of places I want to visit. You\'ll have 6 guesses to name one of the places.');
+for (var b = 5; b >= 0; --b) {
+  var placeGuess = prompt('What\'s your guess?');
+  if (placeGuess.toLowerCase() === topPlaces[0].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[1].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[2].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[3].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[4].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[5].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[6].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[7].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[8].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (placeGuess.toLowerCase() === topPlaces[9].toLowerCase()) {
+    correctAnswers++;
+    alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else if (b === 0) {
+    alert('Sorry, but that was your last guess. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
+    console.log('Correct! ' + correctAnswers + outOf);
+    break;
+  }
+  else {
+    alert('Incorrect answer. Only ' + b + '/6 tries remaining');
+    console.log('Incorrect Answer');
   }
 }
 
