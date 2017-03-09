@@ -24,9 +24,12 @@ a:hover {
 }
 
 #oneTime {
-  margin: 100px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
   display: block;
   clear: both;
+  font: bold 2em Helvetica;
+  text-align: center;
+  color: #440000;
 }
 
 p.info {
@@ -68,6 +71,7 @@ em {
 
 top, middle, bottom {
   display: block;
+  overflow: auto;
 }
 
 left {
