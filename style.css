@@ -69,18 +69,18 @@ em {
   font-style: normal;
 }
 
-top, middle, bottom {
+#top, #middle, #bottom {
   display: block;
   overflow: auto;
 }
 
-left {
+.left {
   margin: 2px;
   width: 49%;
   float: left;
 }
 
-right {
+.right {
   margin: 2px;
   width: 49%;
   float: right;
