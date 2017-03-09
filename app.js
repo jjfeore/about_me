@@ -183,3 +183,11 @@ if (correctAnswers === 7) {
 else {
   alert('Bummer, ' + userName + '. You only got ' + correctAnswers + outOf + '. Better luck next time.')
 }
+
+document.getElementById('field1').innerHTML = fiveQuestions[3];
+document.getElementById('field2').innerHTML = fiveQuestions[7];
+document.getElementById('field3').innerHTML = fiveQuestions[11];
+document.getElementById('field4').innerHTML = fiveQuestions[15];
+document.getElementById('field5').innerHTML = fiveQuestions[19];
+document.getElementById('field7').innerHTML = ranNum;
+document.getElementById('field6').innerHTML = topPlaces;
