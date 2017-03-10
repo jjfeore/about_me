@@ -109,65 +109,13 @@ function randomQuest() {
 randomQuest();
 
 var topPlaces = ['Croatia', 'Peru', 'Antarctica', 'Brazil', 'Italy', 'Ethiopia', 'Germany', 'Nepal', 'Turkey', 'Ethiopia'];
-alert (userName + ', I hope you remember my list of places I want to visit. You\'ll have 6 guesses to name one of the places.');
 function placeQuest(){
+  alert (userName + ', I hope you remember my list of places I want to visit. You\'ll have 6 guesses to name one of the places.');
   for (var b = 5; b >= 0; --b) {
     var placeGuess = prompt('What\'s your guess?');
-    if (placeGuess.toLowerCase() === topPlaces[0].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[1].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[2].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[3].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[4].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[5].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[6].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[7].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[8].toLowerCase()) {
-      correctAnswers++;
-      alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
-      console.log('Correct! ' + correctAnswers + outOf);
-      break;
-    }
-    else if (placeGuess.toLowerCase() === topPlaces[9].toLowerCase()) {
+    placeGuess = placeGuess[0].toUpperCase() + placeGuess.slice(1,placeGuess.length).toLowerCase();
+    console.log('Guess is ' + placeGuess);
+    if (topPlaces.includes(placeGuess)) {
       correctAnswers++;
       alert('Wow! You got it. You could have guessed any of the following: ' + topPlaces + ' ' + correctAnswers + outOf);
       console.log('Correct! ' + correctAnswers + outOf);
